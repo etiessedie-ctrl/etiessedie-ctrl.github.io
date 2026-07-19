@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segmentation client RFM — Online Retail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="no-ledger-bg">
+
+<header class="site-header">
+  <div class="nav-row">
+    <a href="../index.html" class="brand">portfolio<span class="dot">.</span>data</a>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="../index.html">Projets</a></li>
+        <li><a href="../about.html">À propos</a></li>
+        <li><a href="../assets/cv.pdf">CV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="case-header">
+      <span class="ticker-badge mono">RFM · Clustering · K-Means</span>
+      <h1>Qui sont les clients qui font vivre l'entreprise ?</h1>
+      <p class="lede">Segmentation de 4 338 clients d'un e-commerçant britannique à partir de 397 884 transactions, pour prioriser les actions marketing et de rétention.</p>
+    </section>
+
+    <div class="metric-row">
+      <div class="metric-cell">
+        <span class="value">397 884</span>
+        <span class="label">Transactions valides</span>
+      </div>
+      <div class="metric-cell">
+        <span class="value">4 338</span>
+        <span class="label">Clients analysés</span>
+      </div>
+      <div class="metric-cell">
+        <span class="value">26,1%</span>
+        <span class="label">Des clients = 80% du CA</span>
+      </div>
+      <div class="metric-cell">
+        <span class="value">66,5%</span>
+        <span class="label">Du CA porté par les Champions</span>
+      </div>
+    </div>
+
+    <div class="star-block">
+      <span class="star-label">Situation</span>
+      <p class="star-text">Un site e-commerce dispose d'un historique de transactions (~542 000 lignes) mais n'a aucune segmentation client pour prioriser ses actions marketing et CRM.</p>
+
+      <span class="star-label">Mission</span>
+      <p class="star-text">Identifier les clients à plus forte valeur, quantifier la concentration du chiffre d'affaires, et détecter les clients à risque de churn pour orienter une stratégie de rétention basée sur les données.</p>
+
+      <span class="star-label">Action</span>
+      <p class="star-text">Nettoyage rigoureux (diagnostic qualité, exclusion des annulations et valeurs aberrantes), construction d'une segmentation RFM (règles métier validées par un clustering K-Means non supervisé), analyse de Pareto, restitution via 3 visuels conçus pour une audience direction.</p>
+
+      <span class="star-label">Résultat</span>
+      <p class="star-text">26,1% des clients génèrent 80% du chiffre d'affaires. Le segment "Champions" (26,3% des clients) concentre 66,5% du CA. 433 237 € de chiffre d'affaires historique identifiés comme récupérables via une campagne de réactivation ciblée.</p>
+    </div>
+
+    <figure class="case-figure">
+      <img src="../assets/img/rfm/pareto_curve.png" alt="Courbe de Pareto montrant la concentration du chiffre d'affaires par décile de clients, avec 80% du CA atteint autour du 3e décile.">
+      <figcaption>Courbe de Pareto — 26,1% des clients concentrent 80% du chiffre d'affaires total.</figcaption>
+    </figure>
+
+    <figure class="case-figure">
+      <img src="../assets/img/rfm/segment_contribution.png" alt="Diagramme en barres horizontales montrant la contribution de chaque segment client au chiffre d'affaires total.">
+      <figcaption>Le segment Champions (26,3% des clients) porte à lui seul 66,5% du chiffre d'affaires.</figcaption>
+    </figure>
+
+    <blockquote class="case-quote">
+      « Un segment à forte valeur historique mais inactif depuis plus de 90 jours représente 433 K€ de CA récurrent — une campagne de réactivation ciblée est recommandée en priorité. »
+    </blockquote>
+
+    <figure class="case-figure">
+      <img src="../assets/img/rfm/segment_map.png" alt="Cartographie des segments clients selon la récence et la fréquence d'achat, la taille des bulles représentant le montant moyen dépensé.">
+      <figcaption>Cartographie Récence × Fréquence — la taille des bulles représente le montant moyen dépensé par segment.</figcaption>
+    </figure>
+
+    <section class="section" style="padding-top:0;">
+      <h2 style="font-size:1.4rem; margin-bottom:16px;">Stack technique</h2>
+      <p style="color:var(--ink-soft); max-width:60ch;">Python · Pandas · NumPy · Scikit-learn (K-Means) · Matplotlib / Seaborn. Code structuré en pipeline modulaire testé de bout en bout (<span class="mono">src/</span>), en plus du notebook exploratoire.</p>
+
+      <div class="case-links">
+        <a href="https://github.com/" class="btn primary">Voir le code sur GitHub</a>
+        <a href="https://github.com/" class="btn">Notebook complet</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Mis à jour en continu — nouveau projet à chaque itération.</p>
+    <div class="socials">
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+      <a href="mailto:ton.email@example.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
